@@ -1,0 +1,254 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+/* header here */
+body {
+  min-width: 1500px; /* Đặt kích thước tối thiểu cho chiều rộng của <body> */
+  min-height: 800px; /* Đặt kích thước tối thiểu cho chiều cao của <body> */
+}
+.header {
+    align-items: center;
+    font-size: 30px;
+    background-color: rgb(221, 223, 224);
+    justify-content: space-around;
+    display: flex;
+    height: 9vh;
+
+}
+.logo a {
+    display: flex;
+    width: auto;
+    height: 80px;
+}
+.name {
+    display: flex; 
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+}
+.menu {
+    list-style-type: none;
+    display: flex;
+    padding: 40px;
+    text-decoration: none;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.menu a {
+    color: black;
+    text-align: center;
+    font-size: 23px;
+    padding: 29px 35px;
+    text-decoration: none;
+    list-style-type: none;
+   
+  }
+  
+  ul.menu li a:hover {
+    background-color: #e4abab;
+  }
+  
+  .submenu {
+    margin-top: 1vw ;
+    display: none;
+    position: absolute;
+    width: 200px;
+    background-color: #ececec; 
+    text-align: center;
+    border: 1px solid rgb(158, 158, 158);
+    list-style-type: none;
+    z-index: 2;
+  }
+  
+  .menu li:hover .submenu {
+    display: block;
+  }
+  .submenu a {
+    color: black;
+    text-decoration: none;
+    display: block;
+  }
+   
+/* body here */
+.slider-wrapper {
+	position: relative;
+	margin: 0 auto;
+}
+.slider-wrapper img {
+  width: 100%;
+  height: auto;
+  z-index: 1;
+}
+.slider {
+	display: flex;
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	scroll-behavior: smooth;
+
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+.slider::-webkit-scrollbar {
+	display: none;
+}
+
+.slider img {
+	flex: 1 0 100%;
+	scroll-snap-align: start;
+	object-fit: cover;
+}
+
+.slider-nav {
+	display: flex;
+	column-gap: 1rem;
+	position: absolute;
+	bottom: 1.25rem;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 1;
+}
+
+.slider-nav a {
+	width: 0.5rem;
+	height: 0.5rem;
+	border-radius: 50%;
+	background-color: #fff;
+	opacity: 0.75;
+	transition: opacity ease 250ms;
+}
+
+.slider-nav a:hover {
+	opacity: 1;
+}
+
+.center_text {
+  text-align: center;
+  margin-top: 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 20px;
+}
+
+.list_product {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.list_product li {
+  flex: 0 0 calc(33.33% - 20px);
+  margin: 0 10px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  transition: background-color 0.3s ease;
+}
+
+.spotlight_product li:hover {
+  background-color: #f2f2f2;
+}
+.spotlight_product {
+  display: flex;
+  flex-direction: column; /* Xếp nội dung theo chiều dọc (cột) */
+  flex: 0 0 calc(33.33% - 20px); /* Độ rộng của cột, sử dụng calc để tính toán */
+  margin: 0 10px; /* Khoảng cách giữa các cột */
+  margin-bottom: 20px; /* Khoảng cách giữa các hàng */
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  align-items: center;
+  text-align: center;
+}
+
+/* Đảm bảo hình ảnh không bị tràn ra ngoài cột */
+.spotlight_product img {
+  max-width: 100%;
+  height: auto;
+}
+/* Thiết lập kiểu hiển thị của phần tử .tittle và p */
+
+.center_wallpaper {
+  margin-top: 1vh;
+  padding-bottom: 50px;
+}
+.center_wallpaper a img {
+  width: 100%;
+  height: auto;
+}
+.more {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  padding-left: 20vw;
+  padding-right: 20vw;
+  font-size: 18px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.brounche {
+  display: flex; /* Sử dụng flexbox để xây dựng layout */
+  flex-wrap: wrap; /* Cho phép các phần tử xuống dòng khi không đủ không gian */
+  padding-top: 60px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.brounche img {
+  max-width: 100%;
+  height: auto; 
+}
+
+.reward {
+  display: flex;
+  flex-direction: column; /* Xếp nội dung theo chiều dọc (cột) */
+  flex: 0 0 calc(50% - 20px); /* Độ rộng của cột, sử dụng calc để tính toán */
+  margin: 0 10px; /* Khoảng cách giữa các cột */
+  margin-bottom: 20px; /* Khoảng cách giữa các hàng */
+  position: relative;
+}
+.insider {
+  display: flex;
+  flex-direction: column; /* Xếp nội dung theo chiều dọc (cột) */
+  flex: 0 0 calc(50% - 20px); /* Độ rộng của cột, sử dụng calc để tính toán */
+  margin: 0 10px; /* Khoảng cách giữa các cột */
+  margin-bottom: 20px; /* Khoảng cách giữa các hàng */
+  position: relative;
+}
+
+.brounche .information  {
+ position: absolute;
+  width: 99%;
+  height: 21%;
+  background-color: #ddd;
+  opacity: 0.5;
+  margin-top: 25%;
+  padding-left: 1%;
+  padding-top: 1%;
+  text-align: start;
+  font-size: 16px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.information h3, p {
+  opacity: 3;
+}
+/* footer */
+.footer {
+  border-top: 1px solid #ddd;
+}
+.footer .shortcut_menu {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 3vh;
+}
+.footer ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  padding-top: 5px;
+  font-size: 20px;
+}
+
+.footer ul li {
+  padding: 10;
+  margin: 0;
+  margin-bottom: 10px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+ 
